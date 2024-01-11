@@ -1,0 +1,21 @@
+# TOML Default overrides config
+
+[working]
+watching_dirs = [ "/tmp/ingest" ]
+recursive = true
+working_dir = "/tmp/cherrykat/working/"
+output_dir = "/tmp/cherrykat/compressed/"
+
+[watching]
+size_limit = 1000000000
+age_limit = 3600
+stale_limit = 1800
+
+[compression]
+compression_level = 9
+
+[hashing]
+algorithm = "sha256"
+
+[logging]
+output = "/var/log/cherrykat.log"
